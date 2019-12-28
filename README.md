@@ -6,7 +6,7 @@ This "example" code used defunct query.yahooapis.com endpoint and don't work wit
 
 
 ### Dependencies
-* [GxEPD](git+https://github.com/lewisxhe/GxEPD)
+* [GxEPD](https://github.com/lewisxhe/GxEPD)
 * [ArduinoJson 6.13.0](https://github.com/bblanchon/ArduinoJson)
 * [Adafruit-GFX-Library](https://github.com/adafruit/Adafruit-GFX-Library)
 
