@@ -3,9 +3,13 @@
 // Set up your location query parameters
 // example LOCATION_Q Firenze or LOCATION_Q Firenze,it
 #define LOCATION_Q Firenze,it
+// your openweathermap appid (https://openweathermap.org/appid)
+#define APPID 0db553d70fa029b887d15af515ff18ob
 // Set up your WIFI preferences
 #define WIFI_SSID "my_ssid"
 #define WIFI_PASSWORD "my_password"
+
+
 typedef struct
 {
   uint32_t code;

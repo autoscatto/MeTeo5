@@ -1,8 +1,8 @@
 #include <WiFiClient.h>
 #include <ArduinoJson.h>
 #include "openweathermap.h"
-#define _WURL(...) "GET /data/2.5/weather?q="#__VA_ARGS__"&units=metric&appid=0db553d70fa029b887d15af515ff18ab  HTTP/1.0"
-#define WURL(...) _WURL(__VA_ARGS__)
+#define _WURL(appid, ...) "GET /data/2.5/weather?q="#__VA_ARGS__"&units=metric&appid="#appid"  HTTP/1.0"
+#define WURL(appid, ...) _WURL(appid, __VA_ARGS__)
 WiFiClient http;
 StaticJsonDocument<8192> jsonBuffer;
 static owth_api_t _result;
@@ -100,7 +100,7 @@ bool getWeather()
   }
 
   Serial.println("Connected!");
-  http.println(WURL(LOCATION_Q));
+  http.println(WURL(APPID, LOCATION_Q));
   http.println("Host: api.openweathermap.org");
   http.println("Connection: close");
  
